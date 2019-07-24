@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PixelValueReversal {
-	class Program {
-		static void Main(string[] args) {
-		} //End_Method
+	class PixelValueReversal {
 	} //End_Class
 } //End_Namespace
