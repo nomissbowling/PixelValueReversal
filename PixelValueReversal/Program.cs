@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 namespace PixelValueReversal {
 	class Program {
 		static void Main(string[] args) {
-			var input = @"C:\Users\tokab\Desktop\3クラス_テスト\未知画像\Kawau";
-			var output = @"C:\Users\tokab\Desktop\3クラス_テスト_output";
+			var input = @"J:\北風研究室\6年\dataset\3クラスAug";
+			var output = @"C:\Users\tokab\Desktop\3クラスAug_色反転";
 
-
-			var ngo = new PixelValueReversal(input, output);
-			ngo.Do();
+			var dirs = Directory.GetDirectories(input);
+			foreach(var d in dirs) {
+				var ngo = new PixelValueReversal(input + "\\" + d.Split('\\').Last(), output + "\\" + d.Split('\\').Last());
+				ngo.Do();
+			}
+			
 		} //End_Method
 	} //End_Class
 } //End_Namespace
